@@ -1,0 +1,32 @@
+\documentclass[12pt,a4paper]{article}
+\pagenumbering{arabic}
+\usepackage{titlepic}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[chorded]{songs}
+
+\noversenumbers
+
+\graphicspath{ {./report/images} }
+
+\newcommand\invisiblesection[1]{%
+    \refstepcounter{section}%
+    \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+    \sectionmark{#1}}
+
+\thispagestyle{empty}
+\title{\emph{\textbf{Upon a Richard Christmas}}}
+\titlepic{\includegraphics[width=150px]{pine-bough-red-ball-ornament}}
+\date{December 2023}
+
+\begin{document}
+
+    \maketitle
+    \newpage
+    \tableofcontents
+    \newpage
+    \begin{songs}{}
+        \include{report/songs/rudolph}
+    \end{songs}
+
+\end{document}
